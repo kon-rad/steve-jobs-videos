@@ -15,6 +15,7 @@
 		FAD2B7A9242FB79A000358EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD2B7A7242FB79A000358EB /* LaunchScreen.storyboard */; };
 		FAD2B7B1242FBBCB000358EB /* steve-bw-image.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2B7B0242FBBCB000358EB /* steve-bw-image.png */; };
 		FAD2B7B4242FBC79000358EB /* VideosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B7B3242FBC79000358EB /* VideosListViewController.swift */; };
+		FAD2B7B7242FC1B8000358EB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B7B6242FC1B8000358EB /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FAD2B7AA242FB79A000358EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD2B7B0242FBBCB000358EB /* steve-bw-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steve-bw-image.png"; sourceTree = "<group>"; };
 		FAD2B7B3242FBC79000358EB /* VideosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosListViewController.swift; sourceTree = "<group>"; };
+		FAD2B7B6242FC1B8000358EB /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				FAD2B79C242FB796000358EB /* AppDelegate.swift */,
 				FAD2B79E242FB796000358EB /* SceneDelegate.swift */,
+				FAD2B7B5242FC190000358EB /* Model */,
 				FAD2B7B2242FBC4B000358EB /* Controllers */,
 				FAD2B7A2242FB796000358EB /* Main.storyboard */,
 				FAD2B7A5242FB79A000358EB /* Assets.xcassets */,
@@ -79,6 +82,14 @@
 				FAD2B7B3242FBC79000358EB /* VideosListViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAD2B7B5242FC190000358EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD2B7B6242FC1B8000358EB /* Video.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				FAD2B79D242FB796000358EB /* AppDelegate.swift in Sources */,
 				FAD2B7B4242FBC79000358EB /* VideosListViewController.swift in Sources */,
 				FAD2B79F242FB796000358EB /* SceneDelegate.swift in Sources */,
+				FAD2B7B7242FC1B8000358EB /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
