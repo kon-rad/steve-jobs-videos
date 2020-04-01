@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class VideosListViewController: UIViewController {
+class VideosListViewController: UITableViewController {
     
     let videos: [Video] = [
         Video(ytId: "UF8uR6Z6KLc", title: "2005 Stanford Commencement Address"),
@@ -19,24 +19,21 @@ class VideosListViewController: UIViewController {
         Video(ytId: "Udi0rk3jZYM", title: "Brainstorms with the NeXT team 1985"),
         Video(ytId: "a0AZLPqjpkg", title: "At the D8 Conference 2010"),
     ]
-    @IBOutlet weak var tableView: UITableView!
+    
+    var video: Video?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
     }
     @IBOutlet weak var onVideoCellPress: UITableViewCell!
     
     
-}
-
-extension VideosListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let video = videos[indexPath.row]
         
@@ -45,21 +42,27 @@ extension VideosListViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(video.title)"
 
         return cell
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! MessageCell
-//        cell.label.text = video.title
-        
-//        cell.leftImageView.isHidden = true
-//        cell.rightImageView.isHidden = false
-//        cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-//        cell.label.textColor = UIColor(named: K.BrandColors.purple)
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as UITableViewCell
-        var (testName) = tasks[indexPath.row]
-        cell.textLabel?.text=testName
-        return cell
-    }
-    
+        //MARK: - TableView Delegate Methods
+        
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+            video = videos[indexPath.row]
+//            performSegue(withIdentifier: "ListToVideoView", sender: video)
+        }
+
+        // This function is called before the segue
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            // get a reference to the second view controller
+            let secondViewController = segue.destination as! VideoView
+//            print(video!.title)
+            
+//            let safeVideo = video {
+//
+//                print(safeVideo!.title)
+//                // set a variable in the second view controller with the data to pass
+//                secondViewController.video = safeVideo
+//            }
+        }
 }

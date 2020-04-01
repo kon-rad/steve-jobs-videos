@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA76777E243377BE008C4E89 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76777D243377BE008C4E89 /* VideoView.swift */; };
 		FAD2B79D242FB796000358EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B79C242FB796000358EB /* AppDelegate.swift */; };
 		FAD2B79F242FB796000358EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B79E242FB796000358EB /* SceneDelegate.swift */; };
 		FAD2B7A1242FB796000358EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B7A0242FB796000358EB /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA76777D243377BE008C4E89 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		FAD2B799242FB796000358EB /* Steve Jobs Videos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Steve Jobs Videos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD2B79C242FB796000358EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD2B79E242FB796000358EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				FAD2B7A0242FB796000358EB /* ViewController.swift */,
 				FAD2B7B3242FBC79000358EB /* VideosListViewController.swift */,
+				FA76777D243377BE008C4E89 /* VideoView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA76777E243377BE008C4E89 /* VideoView.swift in Sources */,
 				FAD2B7A1242FB796000358EB /* ViewController.swift in Sources */,
 				FAD2B79D242FB796000358EB /* AppDelegate.swift in Sources */,
 				FAD2B7B4242FBC79000358EB /* VideosListViewController.swift in Sources */,
