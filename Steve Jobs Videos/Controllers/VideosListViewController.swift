@@ -18,6 +18,13 @@ class VideosListViewController: UITableViewController {
         Video(ytId: "vN4U5FqrOdQ", title: "iPhone 2007 Presentation"),
         Video(ytId: "Udi0rk3jZYM", title: "Brainstorms with the NeXT team 1985"),
         Video(ytId: "a0AZLPqjpkg", title: "At the D8 Conference 2010"),
+        Video(ytId: "QhhFQ-3w5tE", title: "NeXT, OpenStep and the return of Steve Jobs to Apple"),
+        Video(ytId: "oNC8LEj5X4U", title: "1990 The lost interview"),
+        Video(ytId: "IOs6hnTI4lw", title: "Macworld 1997: The return of Steve Jobs"),
+        Video(ytId: "SgWdjvRgouk", title: "Steve Jobs and John Lasseter interview on Pixar (1996)"),
+        Video(ytId: "Nf6C5Uc3ix4", title: "Presentation to the Cupertino City Council June 7, 2011"),
+        Video(ytId: "XbkMcvnNq3g", title: "Steve Jobs on Joseph Juran and Quality"),
+        
     ]
     
     var video: Video?
@@ -47,8 +54,9 @@ class VideosListViewController: UITableViewController {
         
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-            video = videos[indexPath.row]
-//            performSegue(withIdentifier: "ListToVideoView", sender: video)
+            self.video = videos[indexPath.row]
+            print(self.video!.title)
+            performSegue(withIdentifier: "ListToVideoView", sender: self)
         }
 
         // This function is called before the segue
@@ -62,7 +70,7 @@ class VideosListViewController: UITableViewController {
 //
 //                print(safeVideo!.title)
 //                // set a variable in the second view controller with the data to pass
-//                secondViewController.video = safeVideo
+            secondViewController.video = self.video
 //            }
         }
 }

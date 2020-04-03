@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBDCC1702C603258E93DF582 /* Pods_Steve_Jobs_Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4201D366A22DA967BB99C33A /* Pods_Steve_Jobs_Videos.framework */; };
 		FA76777E243377BE008C4E89 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76777D243377BE008C4E89 /* VideoView.swift */; };
 		FAD2B79D242FB796000358EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B79C242FB796000358EB /* AppDelegate.swift */; };
 		FAD2B79F242FB796000358EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B79E242FB796000358EB /* SceneDelegate.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4201D366A22DA967BB99C33A /* Pods_Steve_Jobs_Videos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Steve_Jobs_Videos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B59859AD793AB96C34EFFF /* Pods-Steve Jobs Videos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steve Jobs Videos.release.xcconfig"; path = "Target Support Files/Pods-Steve Jobs Videos/Pods-Steve Jobs Videos.release.xcconfig"; sourceTree = "<group>"; };
+		A25BCC48C90BDC7C3C2E181A /* Pods-Steve Jobs Videos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steve Jobs Videos.debug.xcconfig"; path = "Target Support Files/Pods-Steve Jobs Videos/Pods-Steve Jobs Videos.debug.xcconfig"; sourceTree = "<group>"; };
 		FA76777D243377BE008C4E89 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		FAD2B799242FB796000358EB /* Steve Jobs Videos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Steve Jobs Videos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD2B79C242FB796000358EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDCC1702C603258E93DF582 /* Pods_Steve_Jobs_Videos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78240938D1ACB4B294B80590 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A25BCC48C90BDC7C3C2E181A /* Pods-Steve Jobs Videos.debug.xcconfig */,
+				94B59859AD793AB96C34EFFF /* Pods-Steve Jobs Videos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7AC22172A806CD4D70B648E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4201D366A22DA967BB99C33A /* Pods_Steve_Jobs_Videos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAD2B790242FB796000358EB = {
 			isa = PBXGroup;
 			children = (
 				FAD2B79B242FB796000358EB /* Steve Jobs Videos */,
 				FAD2B79A242FB796000358EB /* Products */,
+				78240938D1ACB4B294B80590 /* Pods */,
+				7AC22172A806CD4D70B648E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD2B7AD242FB79A000358EB /* Build configuration list for PBXNativeTarget "Steve Jobs Videos" */;
 			buildPhases = (
+				484C8F3F5EF3714400A14192 /* [CP] Check Pods Manifest.lock */,
 				FAD2B795242FB796000358EB /* Sources */,
 				FAD2B796242FB796000358EB /* Frameworks */,
 				FAD2B797242FB796000358EB /* Resources */,
+				0C709E7FE47300A558AD71AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +188,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C709E7FE47300A558AD71AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Steve Jobs Videos/Pods-Steve Jobs Videos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Steve Jobs Videos/Pods-Steve Jobs Videos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Steve Jobs Videos/Pods-Steve Jobs Videos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		484C8F3F5EF3714400A14192 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Steve Jobs Videos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAD2B795242FB796000358EB /* Sources */ = {
@@ -314,6 +383,7 @@
 		};
 		FAD2B7AE242FB79A000358EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25BCC48C90BDC7C3C2E181A /* Pods-Steve Jobs Videos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +402,7 @@
 		};
 		FAD2B7AF242FB79A000358EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B59859AD793AB96C34EFFF /* Pods-Steve Jobs Videos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

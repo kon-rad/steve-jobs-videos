@@ -1,0 +1,6 @@
+framework module Pods_Steve_Jobs_Videos {
+  umbrella header "Pods-Steve Jobs Videos-umbrella.h"
+
+  export *
+  module * { export * }
+}
